@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoques</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="login-container">
+    <h2>Cadastro de Usuário</h2>
+    <form onsubmit="mostrarDados(event)">
+        <input type="text" id="Nome" placeholder="Nome" required>
+        <input type="text" id="E-mail" placeholder="E-mail" required>
+        <input type="text" id="Telefone" placeholder="Telefone" required>
+        <input type="password" id="Senha" placeholder="Senha" required>
+
+        <button type="button" onclick="window.location.href='login.html'">
+    Cadastrar
+</button>
+        <p class="login-link">
+            Já tem cadastro?
+           <button type="button" onclick="window.location.href='login.html'">
+            Faça Login
+           </button>
+        </p>
+    </form>
+  </div>
+  
+  </body>
+
+
+</html>
