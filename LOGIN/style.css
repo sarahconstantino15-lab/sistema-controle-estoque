@@ -12,8 +12,9 @@ body {
 
 .login-container {
     background: rgba(182, 130, 17, 0.781);
-    padding: 50px;
-    border-radius: 50px;
+    padding: 60px;
+    padding-right: 60px;
+    border-radius: 60px;
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.2);
     width: 300px;
 }
@@ -36,7 +37,7 @@ body {
 .login-container button {
     width: 60%;
     padding: 10px;
-    background: #5429b9;
+    background: purple  ;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -59,7 +60,7 @@ body {
     width: auto;
     padding: 0;
     background: grey;
-    color: #3729b9;
+    color: purple;    
     border: none;
     border-radius: 0;
     cursor: pointer;
@@ -81,8 +82,8 @@ body {
 .login-link button {
     width: auto;
     padding: 0;
-    background: grey;
-    color: #4f29b9;
+    background: none;
+    color: none;
     border: none;
     border-radius: 0;
     cursor: pointer;
@@ -90,7 +91,7 @@ body {
 }
 
 .login-link button:hover {
-    background: grey;
+    background:none;
     color: white;
     text-decoration: underline;
 }
