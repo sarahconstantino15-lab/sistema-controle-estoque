@@ -6,3 +6,4 @@ Sistema desenvolvido para gerenciamento e controle de estoque de restaurante.
 # Tecnologias utilizadas
 - HTML
 - CSS
+- JavaScript
