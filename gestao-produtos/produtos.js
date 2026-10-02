@@ -2,7 +2,7 @@ const CHAVE_STORAGE = 'produtos_estoque';
 const CHAVE_MOVIMENTACOES = 'movimentacoes_estoque';
 
 // Quantidade a partir da qual um produto é considerado com estoque baixo
-const LIMITE_ESTOQUE_BAIXO = 5;
+const LIMITE_ESTOQUE_BAIXO <= 9;
 
 // Quantas movimentações mais recentes aparecem no histórico
 const LIMITE_HISTORICO_EXIBIDO = 100;
