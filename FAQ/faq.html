@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - Perguntas Frequentes</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+
+    <main class="container faq">
+        <h2>Suporte e Perguntas Frequentes</h2>
+        <p>Encontre respostas rápidas sobre o Controle de Estoque.</p>
+
+        <label for="busca-faq">Pesquisar pergunta</label>
+        <input type="text" id="busca-faq" placeholder="Ex: cadastrar, salvar, senha...">
+        <p id="sem-resultados" hidden>Nenhuma pergunta encontrada. Tente outra palavra ou fale com o suporte.</p>
+
+        <section class="faq-secao">
+            <h3>Uso do sistema</h3>
+
+            <details>
+                <summary>Como cadastro um produto novo?</summary>
+                <p>Na tela de Gestão de Produtos, preencha o nome, a quantidade e o preço (R$) e clique em "Cadastrar Produto". Ele aparecerá na tabela "Produtos no Estoque".</p>
+            </details>
+
+            <details>
+                <summary>Como edito ou removo um produto cadastrado?</summary>
+                <p>Na tabela de produtos, use os botões da coluna "Ações" na linha do produto desejado.</p>
+            </details>
+
+            <details>
+                <summary>Para que serve o botão "Cancelar"?</summary>
+                <p>Ele limpa o formulário sem salvar nada. É útil se você começou a preencher ou a editar um produto e desistiu.</p>
+            </details>
+
+            <details>
+                <summary>Como pesquiso um produto?</summary>
+                <p>Digite o nome ou o ID no campo "Pesquisar Produto". A tabela mostra apenas os itens que correspondem ao que foi digitado.</p>
+            </details>
+
+            <details>
+                <summary>O que significam "Total de Itens" e "Valor Total em Estoque"?</summary>
+                <p>"Total de Itens" mostra a quantidade de itens no estoque. "Valor Total em Estoque" é a soma de quantidade × preço de cada produto.</p>
+            </details>
+
+            <details>
+                <summary>O que é o aviso de estoque baixo?</summary>
+                <p>Quando a quantidade de um produto chega a 5 unidades ou menos, ele é considerado com estoque baixo, para você lembrar de repor.</p>
+            </details>
+
+            <details>
+                <summary>O que é o histórico de movimentações?</summary>
+                <p>É o registro das entradas e saídas de produtos. O sistema exibe as 100 movimentações mais recentes.</p>
+            </details>
+        </section>
+
+        <section class="faq-secao">
+            <h3>Sobre os dados</h3>
+
+            <details>
+                <summary>Onde meus dados ficam salvos?</summary>
+                <p>No próprio navegador (localStorage), no seu computador. Eles não são enviados para nenhum servidor.</p>
+            </details>
+
+            <details>
+                <summary>Meus produtos sumiram. O que aconteceu?</summary>
+                <p>Isso acontece se você limpou os dados de navegação, trocou de navegador, usou uma aba anônima ou abriu o sistema em outro computador. Os dados ficam presos ao navegador onde foram cadastrados.</p>
+            </details>
+
+            <details>
+                <summary>Posso acessar meu estoque de outro computador?</summary>
+                <p>Não. Como os dados ficam salvos só no navegador, cada computador tem o seu próprio estoque.</p>
+            </details>
+
+            <details>
+                <summary>Apareceu "Não foi possível salvar os dados no navegador". E agora?</summary>
+                <p>O armazenamento do navegador pode estar cheio ou bloqueado. Verifique se você não está em aba anônima, libere espaço limpando dados antigos do site e tente de novo.</p>
+            </details>
+        </section>
+
+        <section class="faq-secao">
+            <h3>Acesso e contato</h3>
+
+            <details>
+                <summary>Preciso fazer login para usar o sistema?</summary>
+                <p>A tela de login está em desenvolvimento e ainda não está integrada ao controle de estoque. Por enquanto, o estoque pode ser usado diretamente.</p>
+            </details>
+
+            <details>
+                <summary>Esqueci minha senha. O que faço?</summary>
+                <p>A recuperação de senha ainda não está disponível. Entre em contato com o suporte pelo e-mail abaixo.</p>
+            </details>
+
+            <details>
+                <summary>Como falo com o suporte?</summary>
+                <p>Envie um e-mail para <strong>suporte@exemplo.com</strong> descrevendo o problema. Se possível, informe qual navegador você usa.</p>
+            </details>
+        </section>
+
+        <p><a href="index.html">&larr; Voltar ao estoque</a></p>
+    </main>
+
+    <script src="faq.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* Estilos exclusivos da página de FAQ */
+.faq label {
+    display: block;
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.faq #busca-faq {
+    width: 100%;
+    max-width: 420px;
+    padding: 8px;
+    margin: 6px 0 16px;
+    box-sizing: border-box;
+}
+
+.faq-secao h3 {
+    margin-top: 24px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #ccc;
+}
+
+.faq details {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 8px 0;
+    background: #fff;
+}
+
+.faq summary {
+    cursor: pointer;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.faq summary:hover {
+    background: #f2f2f2;
+}
+
+.faq details p {
+    margin: 0;
+    padding: 0 12px 12px;
+    line-height: 1.5;
+}
+
+.faq [hidden] {
+    display: none;
+}
