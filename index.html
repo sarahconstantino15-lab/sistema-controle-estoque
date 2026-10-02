@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="pt-BR">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de Estoque</title>
     <link rel="stylesheet" href="estilo.css">
@@ -11,25 +11,26 @@
     <main class="container">
         <h2>Gestão de Produtos</h2>
 
+        <!-- Formulário de Cadastro / Edição -->
         <form id="form-produto">
             <input type="hidden" id="produto-id">
 
             <div class="grupo-input">
                 <label for="nome">Nome do Produto</label>
-                <input type="text" id="nome" required placeholder="Ex: Teclado Mecânico">   
+                <input type="text" id="nome" required placeholder="Digite o nome do produto">   
             </div>
             <div class="grupo-input">
-                <label for="quantidade">Quantidade</label>
-                <input type="number" id="quantidade" min="0" required placeholder="0">
+                <label for="quantidade">Quantidade Inicial</label>
+                <input type="number" id="quantidade" min="0" step="1" required placeholder="0">
             </div>
             <div class="grupo-input">
                 <label for="preco">Preço (R$):</label>
-                <input type="number" id="preco" step="0.01" min="0" required>
+                <input type="number" id="preco" step="0.01" min="0" required placeholder="0.00">
             </div>
             
             <div class="form-acoes">
-            <button type="submit" id="btn-salvar">Cadastrar Produto</button>
-            <button type="button" id="btn-cancelar">Cancelar</button>
+                <button type="submit" id="btn-salvar">Cadastrar Produto</button>
+                <button type="button" id="btn-cancelar">Cancelar</button>
             </div>
         </form>
 
@@ -37,29 +38,67 @@
 
         <h3>Produtos no Estoque</h3>
 
-        <div class="grupo-input-busca">
-            <label for="input-busca">Pesquisar Produto</label>
-            <input type="text" id="input-busca" placeholder="Digite o nome ou ID...">
+        <!-- Área de Pesquisa e Filtros -->
+        <div class="filtros-container">
+            <div class="grupo-input">
+                <label for="input-busca">Pesquisar Produto</label>
+                <input type="text" id="input-busca" placeholder="Digite o nome ou ID...">
+            </div>
+            <div class="grupo-input">
+                <label for="filtro-situacao">Situação</label>
+                <select id="filtro-situacao">
+                    <option value="todos">Todos os produtos</option>
+                    <option value="baixo">Estoque baixo </option>
+                    <option value="zerado">Estoque zerado</option>
+                </select>
+            </div>
+            <button type="button" id="btn-limpar-filtros" hidden>Limpar Filtros</button>
         </div>
 
-        <div class="container-tabela">
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Quantidade</th>
-                    <th>Preço</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody id="tabela-produtos"></tbody>
-        </table>
+        <!-- Tabela de Produtos -->
+        <div class="tabela-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-produtos"></tbody>
+            </table>
+        </div>
+
         <div class="resumo-estoque">
             <p>Total de Itens: <strong id="total-quantidade">0</strong></p>
-            <p>Valor Total em Estoque: R$ <strong id="total-valor">0.00</strong></p>
+            <p>Valor Total em Estoque: <strong id="total-valor">R$ 0.00</strong></p>
         </div>
-        <script src="produtos.js"></script>
+
+        <hr>
+
+        <!-- Tabela de Histórico de Movimentações -->
+        <h3>Histórico de Movimentações (Entradas / Saídas)</h3>
+
+        <div class="tabela-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data/Hora</th>
+                        <th>Produto</th>
+                        <th>Tipo</th>
+                        <th>Qtd</th>
+                        <th>Saldo</th>
+                        <th>Observação</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-movimentacoes"></tbody>
+            </table>
+        </div>
+
     </main>
+
+    <script src="produtos.js"></script>
 </body>
 </html>
